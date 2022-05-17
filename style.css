@@ -7,23 +7,46 @@
 }
 
 body {
-    background-color: #DDD;
+    background-color: #F9F9F9;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-color: #2196F3;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 2px solid #F2F2F2;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: auto auto; /** Dividi a linha em dus colunas, dependendo quantos elementos deseja na linha **/
+    justify-content: space-between;
 }
 
-header, section {
-    padding: 5rem;
+.logo img {
+    width: 100px;
+}
+
+.search input[type="search"] {
+    width: 400px;
+    padding: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid #CCC;
+}
+
+.button {
+    padding: 0.25rem 1.5rem;
+    border: 1px solid #2C5FD5;
+    border-radius: 2px;
+    color: #2C5FD5;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 main {
-    max-width: 1200px;
     margin: auto;
 
     display: grid;  /** Formando o conteudo main em grid **/
-    grid-row-gap: 1rem; /** Espaçamento entre linhas do grid **/
 
     grid-template-areas: 
         'video-player   video-player'
@@ -62,10 +85,33 @@ main {
 .ad {
     background-color: #FF5722;
     grid-area: ad;
-    display: none;
 }
 
 .up-next {
     background-color: #3F51B5;
     grid-area: up-next;
+}
+
+@media screen and (max-width: 700px) {
+    .search, .ad {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header{
+        grid-template-columns: auto auto auto; /**  **/
+    }
+
+    main {
+        max-width: 1200px;
+
+        grid-template-areas: 
+            'video-player   video-player    ad'
+            'video-player   video-player    up-next'
+            'video-info     actions         up-next'
+            'channel        subscribe       up-next'
+        ; /** desenhano o layout com grid **/
+    }
+    
 }
