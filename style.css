@@ -1,0 +1,71 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DDD;
+}
+
+header {
+    background-color: #2196F3;
+}
+
+header, section {
+    padding: 5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;  /** Formando o conteudo main em grid **/
+    grid-row-gap: 1rem; /** Espaçamento entre linhas do grid **/
+
+    grid-template-areas: 
+        'video-player   video-player'
+        'video-info     video-info'
+        'actions        actions'
+        'channel        subscribe'
+        'up-next        up-next'
+    ; /** desenhano o layout com grid **/
+}
+
+.video-player {
+    background-color: #FFEB3B;
+    grid-area: video-player;
+}
+
+.video-info {
+    background-color: #E91E63;
+    grid-area: video-info;
+}
+
+.actions {
+    background-color: #03A9F4;
+    grid-area: actions;
+}
+
+.channel {
+    background-color: #673AB7;
+    grid-area: channel;
+}
+
+.subscribe {
+    background-color: #8BC34A;
+    grid-area: subscribe;
+}
+
+.ad {
+    background-color: #FF5722;
+    grid-area: ad;
+    display: none;
+}
+
+.up-next {
+    background-color: #3F51B5;
+    grid-area: up-next;
+}
