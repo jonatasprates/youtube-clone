@@ -47,6 +47,7 @@ main {
     margin: auto;
 
     display: grid;  /** Formando o conteudo main em grid **/
+    grid-row-gap: 1rem;
 
     grid-template-areas: 
         'video-player   video-player'
@@ -78,8 +79,19 @@ main {
 }
 
 .video-info {
-    background-color: #E91E63;
     grid-area: video-info;
+
+    padding: 0 0 1rem 1rem;
+}
+
+.video-info h1 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.video-info .views {
+    color: #606060;
 }
 
 .actions {
