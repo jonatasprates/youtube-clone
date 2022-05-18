@@ -127,8 +127,30 @@ main {
 }
 
 .channel {
-    background-color: #673AB7;
     grid-area: channel;
+
+    padding: 1rem;
+    border-bottom: 1px solid #DDD;
+
+    display: grid;
+    grid-template-columns:  auto auto; /** alinhando conteudo para direita e o outro para a esquerda **/
+    justify-content: start; /** alinha para a esquerda **/
+    grid-gap: 1rem; /** espaçamento entre os elementos **/
+}
+
+.channel img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.channel .date {
+    color: #777;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.channel .channel-description {
+    font-size: 0.8rem;
 }
 
 .subscribe {
