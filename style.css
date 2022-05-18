@@ -43,6 +43,14 @@ header {
     text-decoration: none;
 }
 
+.subscribe .button {
+    border: none;
+    background-color: #FB2300;
+    color: white;
+    padding: 10px 16px;
+    text-transform: uppercase; /** deixar o texto em letra maiúsculas **/
+}
+
 main {
     margin: auto;
 
@@ -154,8 +162,11 @@ main {
 }
 
 .subscribe {
-    background-color: #8BC34A;
     grid-area: subscribe;
+
+    padding: 3rem 1rem;
+    border-bottom: 1px solid #DDD;
+    text-align: right;
 }
 
 .ad {
