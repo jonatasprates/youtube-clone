@@ -54,6 +54,7 @@ a {
     color: white;
     padding: 10px 16px;
     text-transform: uppercase; /** deixar o texto em letra maiúsculas **/
+    font-size: 0.8rem;
 }
 
 main {
@@ -177,15 +178,18 @@ main {
 .ad {
     grid-area: ad;
 
-    padding: 4rem;
-    text-align: center;
-    background-color: #2196F3;
+    margin: 1rem;
+    margin-bottom: 1rem;
     color: white;
+}
+
+.ad img {
+    width: 100%;
 }
 
 .up-next {
     grid-area: up-next;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 .up-next a {
@@ -230,7 +234,12 @@ main {
             'video-player   video-player    up-next'
             'video-info     actions         up-next'
             'channel        subscribe       up-next'
+            '.              .               up-next' /** . representa um espaço vazio **/
         ; /** desenhano o layout com grid **/
+    }
+
+    .video-info {
+        border-bottom: 1px solid #DDD;
     }
     
 }
